@@ -1,23 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
+import {Routes, Route} from "react-router-dom"
+import Categories from "./components/Categories"
+import CategoryForm from "./components/CategoryForm"
+import CategoryShow from "./components/CategoryShow"
+import Items from "./components/Items"
+import ItemForm from "./components/ItemForm"
+import ItemShow from "./components/ItemShow"
+import Articles from "./components/Articles"
+import ArticleShow from "./components/ArticleShow"
+import ArticleForm from "./components/ArticleForm"
+import Jobs from "./components/Jobs"
+import JobShow from "./components/JobShow"
+import JobForm from "./components/JobForm"
+import Navbar from "./components/Navbar"
+import About from "./components/About"
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        
+        <Route path="/" element={<Categories />}/>
+        <Route path="/categories" element={<Categories />}/>
+        <Route path="/categories/new" element={<CategoryForm />}/>
+        <Route path="/categories/:id" element={<CategoryShow />}/>
+
+        <Route path="/categories/:category_id/items" element={<Items />}/>
+        <Route path="/categories/:category_id/items/new" element={<ItemForm />}/>
+        <Route path="/categories/:category_id/items/:id" element={<ItemShow />}/>
+
+        <Route path="/articles" element={<Articles />}/>
+        <Route path="/articles/new" element={<ArticleForm />}/>
+        <Route path="/articles/:id" element={<ArticleShow />}/>
+
+        <Route path="/jobs" element={<Jobs />}/>
+        <Route path="/jobs/new" element={<JobForm />}/>
+        <Route path="/jobs/:id" element={<JobShow />}/>
+
+        <Route path="/about" element={<About />}/>
+      </Routes>
     </div>
   );
 }
