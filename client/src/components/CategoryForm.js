@@ -11,7 +11,7 @@ const CategoryForm = () => {
     const params = useParams();
   
     useEffect(() => {
-      // don't get fact for new form, only edit
+      // don't get item for new form, only edit
       if (params.id) {
         getCategory();
       }
