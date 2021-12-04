@@ -27,6 +27,7 @@ function App() {
         <Route path="/categories" element={<Categories />}/>
         <Route path="/categories/new" element={<CategoryForm />}/>
         <Route path="/categories/:id" element={<CategoryShow />}/>
+        <Route path="/categories/:id/edit" element={<CategoryForm />}/>
 
         <Route path="/categories/:category_id/items" element={<Items />}/>
         <Route path="/categories/:category_id/items/new" element={<ItemForm />}/>
