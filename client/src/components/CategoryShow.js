@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 const CategoryShow = () => {
     const [name, setName] = useState("");
+    const [category, setCategory] = useState({});
     const navigate = useNavigate();
     const params = useParams();
   
@@ -15,9 +16,9 @@ const CategoryShow = () => {
     const getCategory = async () => {
       try {
         let res = await axios.get(`/api/categories/${params.id}`);
-        setName(res.data.name);
+        setCategory(res.data);
       } catch (err) {
-        alert("err occurred getting category");
+        alert(err);
       }
     };
   
@@ -28,7 +29,7 @@ const CategoryShow = () => {
   
     return(
       <div>
-         <p>Name: {name}</p>
+         <p>Name: {category.name}</p>
          <p>id: {params.id}</p>
          <Link to={`/categories/${params.id}/edit`}>Edit</Link>
          <button onClick={()=>deleteCategory()} >Delete</button>
