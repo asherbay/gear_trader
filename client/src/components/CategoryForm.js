@@ -58,12 +58,14 @@ const CategoryForm = () => {
       }
     };
     return (
-      <div>
+      <div className='form'>
         <h1>{params.id ? "Edit" : "New"} Category </h1>
         <form onSubmit={handleSubmit}>
-          <p>Name</p>
+          <p><strong>Name</strong></p>
           <input value={name} onChange={(e) => setName(e.target.value)} />
-          <button>{params.id ? "Update" : "Create"} </button>
+          <br/>
+          <br/>
+          <button className= 'button-25'>{params.id ? "Update" : "Create"} </button>
         </form>
       </div>
     );

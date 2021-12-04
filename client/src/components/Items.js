@@ -47,12 +47,14 @@ const Items = (props) => {
 
 
     return (
-        <div>
+        <div >
             <h1>{category.name} Items</h1>
-            <div >
-            <Link to={`/categories/${category.id}/items/new`}>New Item</Link>
-            <Link to={`/categories`}>Back to Gear</Link>
-            <p>{renderItems()}</p>
+            <div>
+            <Link className= 'button-25' to={`/categories/${category.id}/items/new`}>New Item</Link>
+            <Link className= 'button-24' to={`/categories`}>Back to Gear</Link>
+            <div className='item-row'>
+            {renderItems()}
+            </div>
             </div>
         </div>
 

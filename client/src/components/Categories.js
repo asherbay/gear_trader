@@ -46,7 +46,7 @@ const Categories = () => {
                 <h1 className='page-header'>What Kind of Gear Are You Looking For?</h1> 
                 <hr/>
             </div>
-            <Link to={`/categories/new`}>New Category</Link>
+            <Link className= 'button-24' to={`/categories/new`}>New Category</Link>
             <div className= 'item-row'>
                 {renderCategories()}
             </div>

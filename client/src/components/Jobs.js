@@ -19,18 +19,24 @@ const Jobs = () => {
     const renderJobs = () => {
         return jobs.map((job) => {
             return(
-                <div>
+                <div  className='job-container'>
+                    <div>
                     <h3>{job.title}</h3>
                     <p>{job.company}</p>
+                    </div>
+                    <div>
                     <p>$ {job.salary}</p>
-                    <Link to={`/jobs/${job.id}`} state={{ job }}><button>View</button></Link>
+                    </div>
+                    <div>
+                    <Link className='button-24' to={`/jobs/${job.id}`} state={{ job }}>View</Link>
+                    </div>
                 </div>
         )}
     )}
     return (
         <div>
             <h1>Jobs</h1>
-            <Link to={"/jobs/new"}><button>Post a New Job</button></Link>
+            <Link className='button-24' to={"/jobs/new"}>Post a New Job</Link>
             {renderJobs()}
         </div>
 
