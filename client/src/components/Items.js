@@ -10,7 +10,7 @@ const Items = (props) => {
     const location = useLocation()
     const params = useParams()
     const category = props.category
-    console.log(category.name)
+
 
     useEffect(()=>{
         getItems()
@@ -42,7 +42,7 @@ const Items = (props) => {
       };
 
     const renderItems = () => {
-        return items.map((item) => <Item key={item.id} deleteItem={deleteItem} {...item}/>)
+        return items.map((item) => <Item key={item.id} deleteItem={deleteItem} updateItem={updateItem} {...item}/>)
     }
 
 
