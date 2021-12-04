@@ -43,7 +43,9 @@ const Items = (props) => {
     return (
         <div>
             <h1>{category.name} Items</h1>
+            <div >
             <p>{renderItems()}</p>
+            </div>
         </div>
 
     )

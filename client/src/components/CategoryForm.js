@@ -35,7 +35,7 @@ const CategoryForm = () => {
           let response = await axios.put(`/api/categories/${params.id}`, category);
           console.log(response.data);
           // need update UI (update response.data in items)
-          navigate("/");
+          navigate("/categories");
         } catch (err) {
           alert(`${err.response.data.errors}`);
           console.log(err);
@@ -48,7 +48,7 @@ const CategoryForm = () => {
         // save to database DONE
         try {
           let response = await axios.post("/api/categories", category);
-          navigate("/");
+          navigate("/categories");
           // need update  (add response.data to items)
         } catch (err) {
           alert("err occured");

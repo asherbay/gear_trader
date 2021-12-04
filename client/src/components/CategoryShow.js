@@ -29,13 +29,17 @@ const CategoryShow = () => {
     };
   
     return(
-      <div>
-         <p>Name: {category.name}</p>
-         <p>id: {params.id}</p>
-         <Link to={`/categories/${params.id}/edit`}>Edit</Link>
-         <button onClick={()=>deleteCategory()} >Delete</button>
+      <div style={style.boxes}>
          <Items category={category}/>
       </div>
     );
   };
+
+  const style = {
+    boxes: {
+        display: 'flex',
+        flexDirection: 'row',
+    }
+  }
 export default CategoryShow;
+
