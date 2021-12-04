@@ -6,7 +6,7 @@ import Items from './Items'
 
 const ItemShow = () => {
     const [name, setName] = useState("");
-    const [category, setItem] = useState({});
+    const [item, setItem] = useState({});
     const navigate = useNavigate();
     const params = useParams();
   
@@ -30,9 +30,10 @@ const ItemShow = () => {
   
     return(
       <div>
-         <p>Name: {category.name}</p>
+         <p>Name: {item.name}</p>
          <p>id: {params.id}</p>
          <Link to={`/categories/${params.category_id}/items/${params.id}/edit`}>edit</Link>
+         <Link to={`/categories/${params.category_id}`}>Back</Link>
          <button onClick={()=>deleteItem()} >Delete</button>
       </div>
     );

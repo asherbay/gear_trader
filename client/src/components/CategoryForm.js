@@ -48,7 +48,7 @@ const CategoryForm = () => {
         // save to database DONE
         try {
           let response = await axios.post("/api/categories", category);
-          navigate("/");
+          navigate("/categories");
           // need update  (add response.data to items)
         } catch (err) {
           alert("err occured");
