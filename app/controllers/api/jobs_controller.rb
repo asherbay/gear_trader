@@ -1,43 +1,42 @@
 class Api::JobsController < ApplicationController
-
-  before_action :set_bug, only: [:show, :update, :destroy]
-
+  before_action :set_job, only: [:show, :update, :destroy]
+  
   def index
-    render json: Bug.all
+    render json: Job.all
   end
 
   def show
-    render json: @bug
+    render json: @job
   end
 
   def create
-    @bug = Bug.new(bug_params)
-    if (@bug.save)
-      render json: @bug
+    @job = Job.new(job_params)
+    if (@job.save)
+      render json: @job
     else
-      render json: { errors: @bug.errors }, status: 422
+      render json: { errors: @job.errors }, status: 422
     end
   end
 
   def update
-    if (@bug.update(bug_params))
-      render json: @bug
+    if (@job.update(job_params))
+      render json: @job
     else
-      render json: { errors: @bug.errors }, status: 422
+      render json: { errors: @job.errors }, status: 422
     end
   end
 
   def destroy
-    render json: @bug.destroy
+    render json: @job.destroy
   end
 
   private
 
-  def set_bug
-    @bug = Bug.find(params[:id])
+  def set_job
+    @job = Job.find(params[:id])
   end
 
-  def bug_params
-    params.require(:bug).permit(:name, :description)
+  def job_params
+    params.require(:job).permit(:title, :company, :salary)
   end
 end
