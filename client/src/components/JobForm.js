@@ -31,7 +31,7 @@ const JobForm = () => {
         }
     }
     return (
-        <div>
+        <div className='form'>
             <h1>{params.id ? "" : "Add a New Job Posting"}</h1>
             <form onSubmit={handleSubmit}>
             <h3>Title</h3>
