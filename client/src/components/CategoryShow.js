@@ -30,10 +30,6 @@ const CategoryShow = () => {
   
     return(
       <div>
-         <p>Name: {category.name}</p>
-         <p>id: {params.id}</p>
-         <Link to={`/categories/${params.id}/edit`}>Edit</Link>
-         <button onClick={()=>deleteCategory()} >Delete</button>
          <Items category={category}/>
       </div>
     );

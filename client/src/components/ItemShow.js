@@ -25,14 +25,14 @@ const ItemShow = () => {
   
     const deleteItem = async () => {
       await axios.delete(`/api/categories/${params.category_id}/items/${params.id}`);
-      navigate(`/categories/${params.category_id}/items`);
+      navigate(`/categories/${params.category_id}`);
     };
   
     return(
       <div>
          <p>Name: {category.name}</p>
          <p>id: {params.id}</p>
-         <Link to={`/api/categories/${params.category_id}/items/${params.id}/edit`}>Edit</Link>
+         <Link to={`/categories/${params.category_id}/items/${params.id}/edit`}>edit</Link>
          <button onClick={()=>deleteItem()} >Delete</button>
       </div>
     );
