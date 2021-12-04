@@ -3,19 +3,19 @@ import { Link } from "react-router-dom"
 import axios from "axios";
 import Job from "./Job"
 
-const job1 = {id:1, title: "Bicycle Your Guide", company: "Escapes", salary: 54000}
-const job2 = {id:2, title: "Running Footware Buyer", company: "Running Center", salary: 60000}
-const job3 = {id:3, title: "Dog Walker", company: "Dogs, Dogs, Dogs", salary: 28000}
-
 const Jobs = () => {
     const [jobs, setJobs] = useState([])
-    const jobArr = [job1, job2, job3]
     useEffect(()=>{
         getJobs()
     }, [])
 
-    const getJobs = () => {
-        setJobs(jobArr)
+    const getJobs = async () => {
+        try {
+            let data = await axios.get("/api/jobs")
+            setJobs(data.data)
+        } catch (err) {
+            alert("Error Occurred during getJobs()")
+        }
     }
     const renderJobs = () => {
         return jobs.map((job) => {
