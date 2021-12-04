@@ -34,7 +34,7 @@ const JobShow = () => {
             {showEdit ? "Hide" : "Update"}
             </button>
          <button onClick={()=>deleteJob()} >Delete</button>
-         {showEdit && <JobForm />}
+         {showEdit && <JobForm state={{ job }}/>}
       </div>
     );
   }
