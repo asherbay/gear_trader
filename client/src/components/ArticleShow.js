@@ -27,9 +27,9 @@ const ArticleShow = () => {
     return(
       <div> 
      
-        <h1 style={{color: "blue"}}>{article.title}</h1>
-        <h3 style={{fontFamily: '-apple-system', fontSize: "2rem"}}>Contributed by: {article.author}</h3>
-        <p style={{fontFamily: '-apple-system', fontSize: "1rem"}}>{article.body}</p>
+        <h1 className='front-page-h3'>{article.title}</h1>
+        <h3 className='front-page-h3' style={{fontFamily: '-apple-system'}}>Contributed by: {article.author}</h3>
+        <p style={{fontFamily: '-apple-system', fontSize: "1rem", margin: '20px 60px'}}>{article.body}</p>
       </div>
     );
   };

@@ -19,7 +19,7 @@ const ArticleForm = () => {
             }
         }
     return (
-        <div>
+        <div className='form'>
             <h1>Post a New Article</h1>
             <form onSubmit={handleSubmit}>
             <h3>Title</h3>

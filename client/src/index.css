@@ -86,12 +86,13 @@ code {
   justify-content: space-between;
   flex-direction: row;
   line-height: 5px;
+  margin: 30px;
 }
 
 .job-component-left {
   margin: 20px;
   text-align: left;
-  width: 200px;
+  width: 250px;
 }
 
 .job-component-center {
@@ -115,7 +116,8 @@ code {
   flex-direction: column;
   max-width: 360px;
   min-width: 250px;
-  line-height: 5px;
+  
+  flex-wrap: wrap;
 
 }
 .item-row {

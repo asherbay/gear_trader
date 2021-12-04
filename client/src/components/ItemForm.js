@@ -33,7 +33,7 @@ const ItemForm = (props) => {
         }
     }
     return (
-        <div>
+        <div className='form'>
             <h1>{params.id ? "" : "Add a New Item"}</h1>
             <form onSubmit={handleSubmit}>
             <h3>Name</h3>
@@ -54,7 +54,7 @@ const ItemForm = (props) => {
                     onChange={(x) => { setCondition(x.target.value)}} />
             
             <br />
-            <button>Submit</button>
+            <button className='button-24' >Submit</button>
             </form>
         </div>
     )
