@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
 import axios from "axios";
-import Job from "./Job"
 
 const Jobs = () => {
     const [jobs, setJobs] = useState([])
@@ -21,13 +20,12 @@ const Jobs = () => {
         return jobs.map((job) => {
             return(
                 <div>
-                    <h3>{job.title}</h3>
+                    <Link to={`/jobs/${job.id}`} state={{ job }}><h3>{job.title}</h3></Link>
                     <p>{job.company}</p>
                     <p>$ {job.salary}</p>
                 </div>
         )}
     )}
-    
     return (
         <div>
             <h1>Jobs</h1>
