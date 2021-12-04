@@ -18,17 +18,19 @@ const Articles  = () => {
     }
     const renderArticles = () => {
         return articles.map((article) => {
+            let shortBody = article.body.slice(0,175);
             return(
                 <div>
-                    <Link to={`/articles/${article.id}`} state={{ article }}><h3>{article.title}</h3></Link>
-                   
+                    <h3>{article.title}</h3>
+                    <p>{shortBody}...</p>
+                    <Link to={`/articles/${article.id}`} state={{ article }}><button>View Article</button></Link>
                 </div>
         )}
     )}
     return (
         <div>
             <h1>Articles</h1>
-            <Link to={"/article/new"}><button>Post a New article</button></Link>
+            <Link to={"/articles/new"}><button>Post a New Article</button></Link>
             {renderArticles()}
         </div>
 

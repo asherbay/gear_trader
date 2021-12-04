@@ -1,12 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ArticleForm = () => {
     const [title, setTitle] = useState("");
     const [author, setAuthor] = useState("");
     const [body, setBody] = useState("");
-    const params = useParams();
     const navigate = useNavigate();
 
     const handleSubmit = async (x) => {

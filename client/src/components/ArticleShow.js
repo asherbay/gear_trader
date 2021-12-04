@@ -28,8 +28,8 @@ const ArticleShow = () => {
       <div> 
      
         <h1>{article.title}</h1>
-        <p>{article.author}</p>
-        <h2>{article.body}</h2>
+        <h3>Contributed by: {article.author}</h3>
+        <p>{article.body}</p>
         
       </div>
     );
