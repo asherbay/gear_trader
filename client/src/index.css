@@ -79,6 +79,18 @@ code {
   max-width: 360px;
   min-width: 250px;
 }
+.job-container {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;  padding: 15px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  line-height: 5px;
+}
+
+.job-components {
+  
+}
 
 .item-container {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
@@ -89,6 +101,7 @@ code {
   flex-direction: column;
   max-width: 360px;
   min-width: 250px;
+
 }
 .item-row {
   padding: 15px;
@@ -117,6 +130,8 @@ code {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+
 
 .navlinkText {
   margin: 0px 20px 0px 20px;

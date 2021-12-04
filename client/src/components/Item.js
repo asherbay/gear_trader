@@ -9,10 +9,9 @@ const Item = (props) => {
             <p>${price}</p>
             <p>{description}</p>
             <p>Condition: {condition}</p>
-            <div>
-            <Link className='button-25' to={`/bugs/${category_id}/items/${id}/edit`}>edit</Link>
-            <button className='button-25' onClick={() => deleteItem(id)}>delete</button>
-            </div>
+            <Link to={`/categories/${category_id}/items/${id}`}>view</Link>
+
+            <button onClick={() => deleteItem(id)}>delete</button>
         </div>
 
     )

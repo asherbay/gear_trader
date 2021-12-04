@@ -2,9 +2,10 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 
-const ItemForm = () => {
+const ItemForm = (props) => {
     const location = useLocation();
-    const { item } = location.state ? location.state : {};
+   // const { item } = location.state ? location.state : {};
+   const item = props.item
     const [name, setName] = useState(item ? item.name : "");
     const [description, setDescription] = useState(item ? item.description : "");
     const [condition, setCondition] = useState(item ? item.condition : "");
@@ -18,14 +19,14 @@ const ItemForm = () => {
         if (params.id) {
             try {
                 await axios.put(`/api/categories/${params.category_id}/items/${params.id}`, data)
-                navigate("/items")
+                navigate(`/categories/${params.category_id}`)
             } catch (err) {
                 alert("Error Occurred when Updating")
             }
         } else {
             try {
                 await axios.post(`/api/categories/${params.category_id}/items`, data)
-                navigate(`/categories/${params.category_id}/items`)
+                navigate(`/categories/${params.category_id}`)
             }catch (err) {
                 alert("Error Occurred when Creating")
             }

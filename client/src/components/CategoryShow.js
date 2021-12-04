@@ -29,7 +29,7 @@ const CategoryShow = () => {
     };
   
     return(
-      <div style={style.boxes}>
+      <div >
          <Items category={category}/>
       </div>
     );
