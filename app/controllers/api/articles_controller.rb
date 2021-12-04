@@ -10,7 +10,7 @@ class Api::ArticlesController < ApplicationController
   end
 
   def create
-    @article = Article.new(bug_params)
+    @article = Article.new(article_params)
     if (@article.save)
       render json: @article
     else
@@ -19,7 +19,7 @@ class Api::ArticlesController < ApplicationController
   end
 
   def update
-    if (@article.update(bug_params))
+    if (@article.update(article_params))
       render json: @article
     else
       render json: { errors: @article.errors }, status: 422
@@ -32,7 +32,7 @@ class Api::ArticlesController < ApplicationController
 
   private
 
-  def set_bug
+  def set_article
     @article = Article.find(params[:id])
   end
 
