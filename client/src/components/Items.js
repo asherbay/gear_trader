@@ -2,6 +2,7 @@ import {useState, useEffect} from "react"
 import {useLocation, useParams} from "react-router"
 import axios from 'axios'
 import Item from './Item'
+import {Link} from 'react-router-dom'
 
 const Items = (props) => {
     const dummy_items = [{name: "beep", id: 0}, {name: "boop", id: 1}, {name: "bop", id: 2}]
@@ -35,6 +36,11 @@ const Items = (props) => {
         setItems(filteredItems)
     }
 
+    const updateItem = (item) => {
+        let updatedItems = items.map((i) => (i.id === item.id ? item : i));
+        setItems(updatedItems);
+      };
+
     const renderItems = () => {
         return items.map((item) => <Item key={item.id} deleteItem={deleteItem} {...item}/>)
     }
@@ -43,7 +49,11 @@ const Items = (props) => {
     return (
         <div>
             <h1>{category.name} Items</h1>
+            <div >
+            <Link to={`/categories/${category.id}/items/new`}>New Item</Link>
+            <Link to={`/categories`}>Back to Gear</Link>
             <p>{renderItems()}</p>
+            </div>
         </div>
 
     )
