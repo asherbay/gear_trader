@@ -83,13 +83,27 @@ code {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;  padding: 15px;
   margin: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   line-height: 5px;
 }
 
-.job-components {
-  
+.job-component-left {
+  margin: 20px;
+  text-align: left;
+  width: 200px;
+}
+
+.job-component-center {
+  text-align: center;
+  margin: 20px;
+  width: 200px;
+}
+
+.job-component-right {
+  margin: 20px;
+  width: 200px;
+
 }
 
 .item-container {
@@ -101,6 +115,7 @@ code {
   flex-direction: column;
   max-width: 360px;
   min-width: 250px;
+  line-height: 5px;
 
 }
 .item-row {
@@ -130,6 +145,16 @@ code {
   flex-wrap: wrap;
   justify-content: center;
 }
+.footer {
+  background-color: #083810;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif; 
+  padding: 30px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 .navlinkText {
   margin: 0px 20px 0px 20px;
