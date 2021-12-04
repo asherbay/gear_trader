@@ -3,12 +3,14 @@ import React from "react"
 const Navbar = () => {
     return (
         <div className='navbar'>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/articles">Articles</Link>
-            <Link to="/jobs">Jobs</Link>
+            <Link className='navlinkText' to="/">Home</Link>
+            <Link className='navlinkText' to="/about">About</Link>
+            <Link  className='navlinkText' to="/articles">Articles</Link>
+            <Link  className='navlinkText' to="/jobs">Jobs</Link>
         </div>
 
-    )
-}
+    );
+};
+
+
 export default Navbar;

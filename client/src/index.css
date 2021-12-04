@@ -26,12 +26,45 @@ code {
   background-image: url("https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   justify-content: center;
   flex-direction: column;
-  padding: 100px;
+  padding: 120px;
   text-align: center;
   line-height: 5px;
 }
 
-.cloth-container {
+.work-img {
+  display: flex;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  justify-content: center;
+  flex-direction: column;
+  padding: 120px;
+  text-align: center;
+  line-height: 5px;
+}
+
+.front_categories {
+  padding: 40px 0px;
+  
+}
+
+.front-page-h1 {
+  color: #BF5C00;
+  font-size: 60px;
+  line-height: 5px;
+}
+
+.front-page-h2 {
+  color: #585858;
+  font-size: 30px;
+}
+
+.front-page-h3 {
+  color: #083810;
+  font-size: 30px;
+
+}
+
+.item-container {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   padding: 15px;
   margin: 10px;
@@ -39,7 +72,7 @@ code {
   flex-direction: column;
   width: 300px;
 }
-.cloth-row {
+.item-row {
   padding: 15px;
   margin: 10px;
   display: flex;
@@ -61,7 +94,13 @@ code {
 .navlinkText {
   margin: 0px 10px 0px 10px;
   text-decoration: none;
-  color: #FFFFFF,
+  color: #FFFFFF !important;
+}
+
+.navlinkText:hover {
+  margin: 0px 10px 0px 10px;
+  text-decoration: none;
+  color: #eed91b !important;
 }
 
 /* CSS */
