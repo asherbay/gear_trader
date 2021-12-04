@@ -7,7 +7,7 @@ const JobShow = () => {
     const [job, setJob] = useState("");
     const navigate = useNavigate();
     const params = useParams();
-    const [showEdit, setShowEdit] = useState(false);
+    const [showEdit, setShowEdit] = useState(true);
   
     useEffect(() => {
       getJob();
@@ -25,18 +25,28 @@ const JobShow = () => {
       await axios.delete(`/api/jobs/${params.id}`);
       navigate("/jobs");
     };
-    return(
-      <div>
-         <h3> {job.title}</h3>
-         <p>At {job.company}</p>
-         <p>Annual Salary: ${job.salary}</p>
-         <button onClick={() => setShowEdit(!showEdit)}>
-            {showEdit ? "Hide" : "Update"}
-            </button>
-         <button onClick={()=>deleteJob()} >Delete</button>
-         {showEdit && <JobForm state={{ job }}/>}
-      </div>
-    );
-  }
+    
+    if (showEdit) {
+        return( 
+            <div>
+                <h3> {job.title}</h3>
+                <p>At {job.company}</p>
+                <p>Annual Salary: ${job.salary}</p>
+                <button onClick={() => setShowEdit(!showEdit)}>
+                 {showEdit ? "Update" : "Hide"}
+                </button>
+                <button onClick={()=>deleteJob()} >Delete</button>
+            </div>
+        )}else {
+           return(
+            <div>
+                <JobForm state={{ job }}/>
+                <br />
+                <button onClick={() => setShowEdit(!showEdit)}>
+                 {showEdit ? "Update" : "Back"}
+                </button>
+            </div>
+  )}
+}
 
 export default JobShow;

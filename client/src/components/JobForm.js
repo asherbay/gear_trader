@@ -34,15 +34,15 @@ const JobForm = () => {
         <div>
             <h1>{params.id ? "" : "Add a New Job Posting"}</h1>
             <form onSubmit={handleSubmit}>
-            <p>Title</p>
+            <h3>Title</h3>
                 <textarea
                     value={title}
                     onChange={(x) => { setTitle(x.target.value)}} />
-            <p>Company</p>
+            <h3>Company</h3>
                     <textarea
                     value={company}
                     onChange={(x) => { setCompany(x.target.value)}} />
-            <p>Annual Salary</p>
+            <h3>Annual Salary</h3>
                     <textarea
                     value={salary}
                     onChange={(x) => { setSalary(x.target.value)}} />
