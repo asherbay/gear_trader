@@ -66,8 +66,10 @@ code {
   padding: 15px;
   margin: 10px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  width: 300px;
+  max-width: 360px;
+  min-width: 250px;
 }
 .item-row {
   padding: 15px;
@@ -76,6 +78,10 @@ code {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.page-header {
+  color:  #083810;
 }
 
 .navbar {
@@ -89,7 +95,7 @@ code {
 }
 
 .navlinkText {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 20px 0px 20px;
   text-decoration: none;
   color: #FFFFFF !important;
 }
@@ -100,7 +106,6 @@ code {
   color: #eed91b !important;
 }
 
-/* CSS */
 .button-24 {
   background: #BF5C00;
   text-decoration: none;
@@ -140,6 +145,44 @@ code {
   opacity: .5;
 }
 
+.button-25 {
+  background: #BF5C00;
+  text-decoration: none;
+  border: 1px solid #BF5C00;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  margin: 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.button-25:hover,
+.button-25:active {
+  background-color: white;
+  background-position: 0 0;
+  color: #BF5C00;
+}
+
+.button-25:active {
+  opacity: .5;
+}
 
 .shadow-box {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;

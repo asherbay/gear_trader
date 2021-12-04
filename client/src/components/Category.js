@@ -7,12 +7,14 @@ const Category = (props) => {
       deleteCategory(id);
     };
     return(
-      <div>
-         <p>Name: {name}</p>
-         <p>id: {id}</p>
-         <Link to={`/categories/${id}`} state={props.id}>View Category</Link>
-         <Link to={`/categories/${id}/edit`}>Edit</Link>
-         <button onClick={deleteOneCategory} >Delete</button>
+      <div className='item-container'>
+         <h2 className='front-page-h2'>{name}</h2>
+         <div>
+         <Link className='button-24' to={`/categories/${id}`} state={props.id}>View Category</Link>
+         <br/>
+         <Link className='button-25' to={`/categories/${id}/edit`}>Edit</Link>
+         <button className='button-25' onClick={deleteOneCategory} >Delete</button>
+         </div>
       </div>
     );
   };

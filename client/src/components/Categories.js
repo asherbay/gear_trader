@@ -42,7 +42,13 @@ const Categories = () => {
 
     return (
         <div>
-            {renderCategories()}
+            <div>
+                <h1 className='page-header'>What Kind of Gear Are You Looking For?</h1> 
+                <hr/>
+            </div>
+            <div className= 'item-row'>
+                {renderCategories()}
+            </div>
         </div>
     );
 };
