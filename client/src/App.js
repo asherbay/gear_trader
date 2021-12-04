@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {Routes, Route} from "react-router-dom"
 import Categories from "./components/Categories"
@@ -15,6 +14,7 @@ import JobShow from "./components/JobShow"
 import JobForm from "./components/JobForm"
 import Navbar from "./components/Navbar"
 import About from "./components/About"
+import Home from './components/Home';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         
-        <Route path="/" element={<Categories />}/>
+        <Route path="/" element={<Home />}/>
         <Route path="/categories" element={<Categories />}/>
         <Route path="/categories/new" element={<CategoryForm />}/>
         <Route path="/categories/:id" element={<CategoryShow />}/>
@@ -42,6 +42,7 @@ function App() {
         <Route path="/jobs/:id" element={<JobShow />}/>
 
         <Route path="/about" element={<About />}/>
+        
       </Routes>
     </div>
   );
