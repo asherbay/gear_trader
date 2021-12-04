@@ -25,8 +25,14 @@ const Items = (props) => {
         setItems([item, ...items])
     }
 
+    const deleteItem = async (id) => {
+        await axios.delete(`/api/categories/${category.id}/items/${id}`)
+        const filteredItems = items.filter((item) => item.id !== id)
+        setItems(filteredItems)
+    }
+
     const renderItems = () => {
-        items.map((item) => <Item key={item.id} {...item}/>)
+        items.map((item) => <Item key={item.id} deleteItem={deleteItem} {...item}/>)
     }
 
 
