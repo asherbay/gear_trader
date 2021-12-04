@@ -11,3 +11,136 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.form {
+  max-width:  300px;
+  margin:  10px auto;
+  padding:  20px 20px;
+  background:  #f4f7f8;
+  border-radius:  8px;
+}
+
+.front-page-img {
+  display: flex;
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/869258/pexels-photo-869258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  justify-content: center;
+  flex-direction: column;
+  padding: 120px;
+  text-align: center;
+  line-height: 5px;
+}
+
+.work-img {
+  background-size: cover;
+  background-image: url("https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  padding: 120px;
+  text-align: center;
+  line-height: 5px;
+}
+
+.front_categories {
+  padding: 40px 0px;
+  
+}
+
+.front-page-h1 {
+  color: #BF5C00;
+  font-size: 60px;
+  line-height: 5px;
+}
+
+.front-page-h2 {
+  color: #585858;
+  font-size: 30px;
+}
+
+.front-page-h3 {
+  color: #083810;
+  font-size: 30px;
+
+}
+
+.item-container {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.item-row {
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navbar {
+  background-color: #083810;
+  color: white;
+  font-family: 'Josefin Sans', sans-serif; 
+  padding: 30px 80px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.navlinkText {
+  margin: 0px 10px 0px 10px;
+  text-decoration: none;
+  color: #FFFFFF !important;
+}
+
+.navlinkText:hover {
+  margin: 0px 10px 0px 10px;
+  text-decoration: none;
+  color: #eed91b !important;
+}
+
+/* CSS */
+.button-24 {
+  background: #BF5C00;
+  text-decoration: none;
+  border: 1px solid #BF5C00;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  margin: 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 150px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: white;
+  background-position: 0 0;
+  color: #BF5C00;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+
+
+.shadow-box {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}

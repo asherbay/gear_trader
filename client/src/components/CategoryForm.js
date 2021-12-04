@@ -4,14 +4,11 @@ import { useParams, useNavigate } from 'react-router';
 
 const CategoryForm = () => {
     const [name, setName] = useState("");
-    const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
-    const [condition, setCondition] = useState("");
     const navigate = useNavigate();
     const params = useParams();
   
     useEffect(() => {
-      // don't get fact for new form, only edit
+      // don't get item for new form, only edit
       if (params.id) {
         getCategory();
       }
@@ -19,7 +16,7 @@ const CategoryForm = () => {
   
     const getCategory = async () => {
       try {
-        let res = await axios.get(`/api/cetegories/${params.id}`);
+        let res = await axios.get(`/api/categories/${params.id}`);
         setName(res.data.name);
       } catch (err) {
         alert("err occurred getting category");

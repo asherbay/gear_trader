@@ -14,9 +14,9 @@ const Categories = () => {
     }, []);
 
     const getCategories = async()=>{
-        // let response = await axios.get('/api/categories');
-        setCategories(catArr);
-        console.log(catArr);
+        let response = await axios.get('/api/categories');
+        setCategories(response.data);
+        console.log(response.data);
       };
 
       const updateCategory = (category) => {
@@ -25,7 +25,7 @@ const Categories = () => {
       };
     
       const deleteCategory = async (id) => {
-        // await axios.delete(`/api/categories/${id}`);
+        await axios.delete(`/api/categories/${id}`);
         // remove from UI
         const filterCategories = categories.filter((category) => category.id !== id);
         setCategories(filterCategories);
