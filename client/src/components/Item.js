@@ -10,7 +10,7 @@ const Item = (props) => {
             <p>{description}</p>
             <p>condition: {condition}</p>
             <Link to={`/categories/${category_id}/items/${id}`}>view</Link>
-            <Link to={`/categories/${category_id}/items/${id}/edit`}>edit</Link>
+
             <button onClick={() => deleteItem(id)}>delete</button>
         </div>
 

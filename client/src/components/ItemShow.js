@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import Items from './Items'
-import ItemForm from './Item'
+import ItemForm from './ItemForm'
 
 const ItemShow = () => {
     const [name, setName] = useState("");
@@ -47,7 +47,7 @@ const ItemShow = () => {
         )}else {
            return(
             <div>
-                <ItemForm state={{ item }}/>
+                <ItemForm state={{ item }} item={item}/>
                 <br />
                 <button onClick={() => setShowEdit(!showEdit)}>
                  {showEdit ? "Update" : "Back"}
