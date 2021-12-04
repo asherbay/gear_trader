@@ -8,8 +8,7 @@ const Category = (props) => {
     };
     return(
       <div>
-         <p>Name: {props.name}</p>
-         <p>id: {props.id}</p>
+         <h2>{props.name}</h2>
          <Link to={`/categories/${props.id}`}>View Category</Link>
          <Link to={`/categories/${props.id}/edit`}>Edit</Link>
          <button onClick={deleteOneCategory} >Delete</button>
