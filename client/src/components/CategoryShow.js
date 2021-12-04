@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
+import Items from './Items'
 
 const CategoryShow = () => {
     const [name, setName] = useState("");
@@ -33,6 +34,7 @@ const CategoryShow = () => {
          <p>id: {params.id}</p>
          <Link to={`/categories/${params.id}/edit`}>Edit</Link>
          <button onClick={()=>deleteCategory()} >Delete</button>
+         <Items category={category}/>
       </div>
     );
   };
