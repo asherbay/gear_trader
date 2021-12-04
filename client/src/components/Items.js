@@ -1,8 +1,10 @@
 import {useState, useEffect} from "react"
 import {useLocation} from "react-router"
 import axios from 'axios'
+import Item from './Item'
 
 const Items = (props) => {
+    const dummy_items = [{name: "beep", id: 0}, {name: "boop", id: 1}, {name: "bop", id: 2}]
     const [items, setItems] = useState([])
     const location = useLocation()
     const category = location.state
@@ -19,6 +21,10 @@ const Items = (props) => {
         } 
     }
 
+    const addItem = (item) => {
+        setItems([item, ...items])
+    }
+
     const renderItems = () => {
         items.map((item) => <Item key={item.id} {...item}/>)
     }
@@ -26,7 +32,7 @@ const Items = (props) => {
 
     return (
         <div>
-            <h1>Items</h1>
+            <h1>{category.name} Items</h1>
             <p>{renderItems()}</p>
         </div>
 
