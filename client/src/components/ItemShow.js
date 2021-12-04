@@ -3,10 +3,12 @@ import React, {useState, useEffect} from 'react';
 import { useParams, useNavigate } from 'react-router';
 import { Link } from 'react-router-dom';
 import Items from './Items'
+import ItemForm from './Item'
 
 const ItemShow = () => {
     const [name, setName] = useState("");
-    const [category, setItem] = useState({});
+    const [item, setItem] = useState({});
+    const [showEdit, setShowEdit] = useState(true);
     const navigate = useNavigate();
     const params = useParams();
   
@@ -25,16 +27,32 @@ const ItemShow = () => {
   
     const deleteItem = async () => {
       await axios.delete(`/api/categories/${params.category_id}/items/${params.id}`);
-      navigate(`/categories/${params.category_id}/items`);
+      navigate(`/categories/${params.category_id}`);
     };
-  
-    return(
-      <div>
-         <p>Name: {category.name}</p>
-         <p>id: {params.id}</p>
-         <Link to={`/api/categories/${params.category_id}/items/${params.id}/edit`}>Edit</Link>
-         <button onClick={()=>deleteItem()} >Delete</button>
-      </div>
-    );
-  };
+    
+    if (showEdit) {
+        return( 
+            <div>
+                <h1>{item.name}</h1>
+                <Link to={`/categories/${params.category_id}`}>Back</Link>
+                <p>{item.price}</p>
+                <p>{item.condition}</p>
+                <p>{item.description}</p>
+                
+                <button onClick={() => setShowEdit(!showEdit)}>
+                 {showEdit ? "Edit" : "Hide"}
+                </button>
+                <button onClick={()=>deleteItem()} >Delete</button>
+            </div>
+        )}else {
+           return(
+            <div>
+                <ItemForm state={{ item }}/>
+                <br />
+                <button onClick={() => setShowEdit(!showEdit)}>
+                 {showEdit ? "Update" : "Back"}
+                </button>
+            </div>
+  )}
+};
 export default ItemShow;

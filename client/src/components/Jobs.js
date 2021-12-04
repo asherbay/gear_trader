@@ -20,9 +20,10 @@ const Jobs = () => {
         return jobs.map((job) => {
             return(
                 <div>
-                    <Link to={`/jobs/${job.id}`} state={{ job }}><h3>{job.title}</h3></Link>
+                    <h3>{job.title}</h3>
                     <p>{job.company}</p>
                     <p>$ {job.salary}</p>
+                    <Link to={`/jobs/${job.id}`} state={{ job }}><button>View</button></Link>
                 </div>
         )}
     )}
