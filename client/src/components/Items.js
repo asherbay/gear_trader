@@ -49,9 +49,11 @@ const Items = (props) => {
     return (
         <div>
             <h1>{category.name} Items</h1>
+            <div >
             <Link to={`/categories/${category.id}/items/new`}>New Item</Link>
             <Link to={`/categories`}>Back to Gear</Link>
             <p>{renderItems()}</p>
+            </div>
         </div>
 
     )

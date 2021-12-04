@@ -29,9 +29,17 @@ const CategoryShow = () => {
     };
   
     return(
-      <div>
+      <div style={style.boxes}>
          <Items category={category}/>
       </div>
     );
   };
+
+  const style = {
+    boxes: {
+        display: 'flex',
+        flexDirection: 'row',
+    }
+  }
 export default CategoryShow;
+

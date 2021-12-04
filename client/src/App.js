@@ -15,6 +15,7 @@ import JobForm from "./components/JobForm"
 import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Home from './components/Home';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/about" element={<About />}/>
         
       </Routes>
+      <Footer/>
     </div>
   );
 }
