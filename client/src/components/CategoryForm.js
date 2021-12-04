@@ -4,9 +4,6 @@ import { useParams, useNavigate } from 'react-router';
 
 const CategoryForm = () => {
     const [name, setName] = useState("");
-    const [price, setPrice] = useState("");
-    const [description, setDescription] = useState("");
-    const [condition, setCondition] = useState("");
     const navigate = useNavigate();
     const params = useParams();
   
@@ -19,7 +16,7 @@ const CategoryForm = () => {
   
     const getCategory = async () => {
       try {
-        let res = await axios.get(`/api/cetegories/${params.id}`);
+        let res = await axios.get(`/api/categories/${params.id}`);
         setName(res.data.name);
       } catch (err) {
         alert("err occurred getting category");

@@ -6,7 +6,7 @@ class Api::CategoriesController < ApplicationController
   end
 
   def show
-    render json: @categories
+    render json: @category
   end
 
   def create
@@ -32,11 +32,11 @@ class Api::CategoriesController < ApplicationController
 
   private
 
-  def set_categorie
+  def set_category
     @category = Category.find(params[:id])
   end
 
   def category_params
-    params.require(:category).permit(:name,)
+    params.require(:category).permit(:name)
   end
 end
