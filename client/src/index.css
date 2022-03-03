@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Helvetica Neue',  
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,8 +11,15 @@ code {
     monospace;
 }
 .about-page {
-  margin: 0px 70px;
+  margin: 0px 500px 0px 500px;
+  line-height: 30px;
+  text-align: center;
 }
+
+.about-page>:not(h1){
+  text-align: left;
+}
+
 .form {
   max-width:  300px;
   margin:  10px auto;
@@ -141,7 +147,7 @@ code {
 .navbar {
   background-color: #083810;
   color: white;
-  font-family: 'Josefin Sans', sans-serif; 
+  font-family: 'Helvetica Neue', sans-serif; 
   padding: 30px 80px;
   display: flex;
   flex-wrap: wrap;
@@ -150,11 +156,12 @@ code {
 .footer {
   background-color: #083810;
   color: white;
-  font-family: 'Josefin Sans', sans-serif; 
+  font-family: 'Helvetica Neue', sans-serif; 
   padding: 30px 80px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: block;
+  text-align: center;
+  
+  
 }
 
 
@@ -167,7 +174,7 @@ code {
 }
 
 .navlinkText:hover {
-  margin: 0px 10px 0px 10px;
+
   text-decoration: none;
   color: #eed91b !important;
 }
@@ -182,7 +189,7 @@ code {
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-family: "Helvetica Neue", sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;
@@ -221,7 +228,7 @@ code {
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 16px;
   font-weight: 800;
   line-height: 16px;

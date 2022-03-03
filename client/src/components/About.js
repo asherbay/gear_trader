@@ -16,7 +16,7 @@ const About = () => {
                 <Link className='button-24' to={`/jobs/`}>View Jobs</Link>
             </div>
             <hr/>
-            <div >
+            {/* <div >
                 <h2 className='front-page-h2'>Who Are We?</h2>
                 <div className= 'item-row'>
                     <div className='about-person-container'>
@@ -36,7 +36,7 @@ const About = () => {
                         <p>Michael is Gear Trader's resident writer and strategist. He wants you to know exactly what you're doing when it comes to buying gear. A marathon runner himself, Michael can relate to his favorite character, the Road Runner. </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
 
     )

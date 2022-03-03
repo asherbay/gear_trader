@@ -28,8 +28,8 @@ const ArticleShow = () => {
       <div> 
      
         <h1 className='front-page-h3'>{article.title}</h1>
-        <h3 className='front-page-h3' style={{fontFamily: '-apple-system'}}>Contributed by: {article.author}</h3>
-        <p style={{fontFamily: '-apple-system', fontSize: "1rem", margin: '20px 60px'}}>{article.body}</p>
+        <h3 className='front-page-h3' style={{fontFamily: 'Helvetica Neue', }}>Contributed by: {article.author}</h3>
+        <p style={{fontFamily: 'Helvetica Neue', fontSize: "1rem",  textAlign: "left", margin: '20px 60px'}}>{article.body}</p>
       </div>
     );
   };
